@@ -16,6 +16,7 @@ string reverse(string s)
 	}
 	return s;
 }
+
 int main()
 {	
 
@@ -28,16 +29,17 @@ int main()
 		for(int i=0;i<len;i++)
 		{
 			int temp=0;
-			if(s[i]>=48 && s[i]<=57){
+			if(s[i]>=48 && s[i]<=57)
+			{
 		
 			if(s[i]=='1')
 				{
 				temp=(s[i]-48)*100+(s[i+1]-48)*10 + (s[i+2]-48);
 				res.pb(temp);
 				i+=2;
-			}
+				}
 			else
-			{
+				{
 				temp=(s[i]-48)*10+(s[i+1]-48);
 				i++;
 				res.pb(temp);
