@@ -34,15 +34,15 @@ int main()
 		
 			if(s[i]=='1')
 				{
-				temp=(s[i]-48)*100+(s[i+1]-48)*10 + (s[i+2]-48);
-				res.pb(temp);
-				i+=2;
+					temp=(s[i]-48)*100+(s[i+1]-48)*10 + (s[i+2]-48);
+					res.pb(temp);
+					i+=2;
 				}
 			else
 				{
-				temp=(s[i]-48)*10+(s[i+1]-48);
-				i++;
-				res.pb(temp);
+					temp=(s[i]-48)*10+(s[i+1]-48);
+					i++;
+					res.pb(temp);
 				}
 			}
 			else
