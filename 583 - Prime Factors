@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define pb push_back
+#define mp make_pair
+#define MP ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
+#define mod 1000000007
+#define ll long long 
+fstream ff;
+
+ll a,b,c,d,e,f,count,n,m,k,i,j,t;
+string s;
+
+int main()
+{
+
+	while(cin>>n && n!=0)
+	{
+		k=n;
+		vector<ll> divisors;
+		if(n<0) divisors.pb(-1), n=n*(-1);
+		for(ll i=2;i*i<=n && (n!=1);i++)
+		{
+			if(n%i==0)
+			{
+				while(n%i==0)
+				{
+					n=n/i;
+					divisors.pb(i);
+				}
+			}
+		}
+		if(n>1) divisors.pb(n);
+		cout<<k<<" = ";
+		for(ll i=0 ;i<divisors.size()-1&& divisors.size();++i)
+		{
+			cout<<divisors[i]<<" x ";
+		}
+		if(divisors.size())cout<<divisors[divisors.size()-1]<<endl;
+		else cout<<endl;
+	}
+return 0;
+}
