@@ -30,6 +30,7 @@ int main() {
             r += n / c;
             n = (n % c) + (n / c);
         }
+        if (n == 2) r++;
         cout << r << endl;
     }
     return 0;
